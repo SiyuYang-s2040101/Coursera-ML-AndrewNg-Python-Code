@@ -13,28 +13,20 @@
            > Enter a file in which to save the key (/Users/you/.ssh/id_ed25519): [Press enter]
            > Enter passphrase (empty for no passphrase): [Type a passphrase](在输入时不会自动显示，但实际上是有记录的)
            > Enter same passphrase again: [Type passphrase again](两次输入的要一样)
-           > Your identification has been saved in /Users/siyuyang/.ssh/id_ed25519.
-           > Your public key has been saved in /Users/siyuyang/.ssh/id_ed25519.pub.
+           > Your identification has been saved in .../.ssh/id_ed25519.
+           > Your public key has been saved in .../.ssh/id_ed25519.pub.
            > The key fingerprint is:
-             SHA256:IvKy+8P5S5df3ev4s23oWP4r5NjGuatfAB+tHdNqxJQ siyuyang1919@outlook.com
+             SHA256:... your_email@example.com
            > The key's randomart image is:
              +--[ED25519 256]--+
-             |              .. |
-             |             oE .|
-             |           . .o+.|
-             |            o.+.o|
-             |  . . . S    +o. |
-             |   o . . .   +.. |
-             |  ..... o   B +o.|
-             |   o+. . . o @+.+|
-             |  oo.oo.  ..=*OO*|
+             ...
              +----[SHA256]-----+
       - 4. Add the generated SSH key to ssh-agent
            $ eval "$(ssh-agent -s)"
            > Agent pid 44531
            $ ssh-add ~/.ssh/id_ed25519
-           > Enter passphrase for /Users/siyuyang/.ssh/id_ed25519: 
-           > Identity added: /Users/siyuyang/.ssh/id_ed25519 (siyuyang1919@outlook.com)
+           > Enter passphrase for .../.ssh/id_ed25519: 
+           > Identity added: .../.ssh/id_ed25519 (your_email@example.com)
       - 5. Get the public SSH key (ATTENTION: THE PUBLIC ONE NOT THE PRIVATE ADDED IN THE PRIVATE FILE BEFORE)
            $ vi ~/.ssh/id_ed25519.pub
            ("Copy exactly from the end (with be the last letter of your email domain extension) of the block of characters to the beginning, which starts with ssh-rs ...")
